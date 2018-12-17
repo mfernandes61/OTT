@@ -5,22 +5,17 @@
 <h2>JavaScript to load DC in R @Crick</h2>
 <b>Two new tabs should appear with the course materials page and an ether pad page<b><br>
 If they don't then your browser is blocking pop-ups and you will need to enable them for this page and  then reload it.<br>
+<script type="text/javascript" src="sites.js"></script>  
+
 <script type="text/javascript">
-	links = ["https://bioinformatics-core-shared-training.github.io/2018-11-29-Crick-London/",
-	"https://pad.carpentries.org/2018-11-29-Crick-London"];
-</script>
-<script type="text/javascript">
-	i=1;
-	links.forEach(loadEnv);
-	
-function loadEnv() {
+var arrayLength = links.length;
+for (var i = 0; i < arrayLength; i++) {
 	tab = concat("_new",i.toString());
 	var open_link = window.open('',tab);
 
 	open_link.location=links[i];
-	i++;
 }
-window.onload = loadEnv;
+
 </script>
 
 </body>
