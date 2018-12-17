@@ -8,13 +8,15 @@ If they don't then your browser is blocking pop-ups and you will need to enable 
 <script type="text/javascript" src="sites.js"></script>  
 
 <script type="text/javascript">
-var arrayLength = links.length;
-for (var i = 0; i < arrayLength; i++) {
-	tab = concat("_new",i.toString());
-	var open_link = window.open('',tab);
-
-	open_link.location=links[i];
+function loadEnv() {
+	var arrayLength = links.length;
+	for (var i = 0; i < arrayLength; i++) {
+		tab = concat("_new",i.toString());
+		var open_link = window.open('',tab);
+		open_link.location=links[i];
+	}
 }
+window.onload = loadEnv;
 
 </script>
 
